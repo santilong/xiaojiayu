@@ -18,7 +18,7 @@ def count(*args):
 
 count('I love fishc.com.','I love you, you love me.')
 
-
+###以下为小甲鱼的答案：
 # def count(*param):
 #     length = len(param)
 #     for i in range(length):
