@@ -19,6 +19,7 @@ def search(key,yup):
                                 pos.append(begin+1)
                                 begin = s1.find(key,begin+1)
                              print('关键字出现在第',line+1,'行，第',pos,'个位置。')
+                 f.close()
              if os.path.isdir(each):
                  os.chdir(each)
                  search(key,yup)
