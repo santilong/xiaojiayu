@@ -48,7 +48,7 @@ import os
 ###
 
 ###buttonbox、msgbox、indexbox、ynbox中添加图片，关键字参数image='.gif'，注意，仅支持GIF格式；
-# g.msgbox(msg='可耻的硬了',title='生理反应',image='111.gif')
+g.msgbox(msg='可耻的硬了',title='生理反应',image='111.gif')
 ###
 
 ###choicebox函数，语法：choicebox(msg='Pick something.', title=' ', choices=())；
@@ -148,11 +148,11 @@ import os
 # settings.store()
 
 ###异常捕获exceptionbox函数；
-try:
-    int('santi')
-except:
-    g.exceptionbox()
-
+# try:
+#     int('santi')
+# except:
+#     g.exceptionbox()
+###
 
 
 
