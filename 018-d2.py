@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # def findstr():
 #     s1 = input('请输入字符串1：')
 #     s2 = input('请输入字符串2：')
@@ -21,3 +22,10 @@ def findStr(desStr, subStr):
 desStr = input('请输入目标字符串：')
 subStr = input('请输入子字符串(两个字符)：')
 findStr(desStr, subStr)
+=======
+def findstr(strs,sub):
+    return strs.count(sub)
+strs = input('请输入字符串1：')
+sub = input('请输入字符串2：')
+print(sub + '在' + '\'' +  strs + '\'' + '中出现的次数为：',findstr(strs,sub))
+>>>>>>> 63aeea4d4ec93c10634f1bdfa1381e122615658c
