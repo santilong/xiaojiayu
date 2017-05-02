@@ -9,13 +9,9 @@ with open(path,encoding='utf8') as f:
     # title = os.path.basename(path)
     msg = '文件{0}的内容如下：'.format(title)
     text = f.read()
-
     print(text)
-
     ntext = g.textbox(msg,'显示文件内容',text=text)
-
     print(ntext)
-
     oldl = len(text)
     newl = len(ntext)
     if oldl > newl:
