@@ -2,12 +2,14 @@ import easygui as g
 import sys
 import os
 def main():
-    dir1 = g.diropenbox('请选择您的代码库','浏览文件夹',default='*')
-    s1 = set(['.py','.php','.txt'])
+    dir1 = g.diropenbox('请选择您的代码库', '浏览文件夹')
+    s1 = set(['.py','.php','.txt','.mp4','.avi'])
     l1 = []
+    d1 = {}
     for i in s1:
         l1.append(i[1:])
-    d1 = dict(zip(l1,([0,0],[0,0],[0,0])))
+    for cha in l1:
+        d1[cha] = [0,0]
     searchmatchfile(dir1,d1)
     monitor(d1)
 

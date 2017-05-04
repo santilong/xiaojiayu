@@ -48,7 +48,7 @@ import os
 ###
 
 ###buttonbox、msgbox、indexbox、ynbox中添加图片，关键字参数image='.gif'，注意，仅支持GIF格式；
-g.msgbox(msg='可耻的硬了',title='生理反应',image='111.gif')
+# g.msgbox(msg='可耻的硬了',title='生理反应',image='111.gif')
 ###
 
 ###choicebox函数，语法：choicebox(msg='Pick something.', title=' ', choices=())；
@@ -120,7 +120,7 @@ g.msgbox(msg='可耻的硬了',title='生理反应',image='111.gif')
 ###fileopenbox函数，语法：fileopenbox(msg=None, title=None, default='*', filetypes=None);
 ###返回用户选择的文件名（带完整路径哦）
 ###filetypes
-# file = g.fileopenbox(default="*.py")
+# file = g.fileopenbox(default='*.py')
 # print(file)
 ###
 
