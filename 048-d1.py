@@ -1,14 +1,52 @@
-class RY:
-    def __init__(self, end=2017):
-        self.start = 0
-        self.end = 0
+'''
+写一个迭代器，要求输出至今为止的所有闰年。如：
+>>> leapYears = LeapYear()
+>>> for i in leapYears:
+        if i >=2000:
+                print(i)
+        else:
+                break
+2012
+2008
+2004
+2000
+提示：闰年判定法（(year%4 == 0 and year%100 != 0) or (year%400 == 0)）
+'''
+
+# class RY:
+#     def __init__(self, end=2017):
+#         self.start = 0
+#         self.end = end
+#         # self.temp = 0
+#     def __iter__(self):
+#         return self
+#     def __next__(self):
+#         while self.start <= self.end:
+#             if (self.start%4 == 0 and self.start%100 != 0) or (self.start%400 == 0):
+#                 temp = self.start
+#                 break
+#             else:
+#                 self.start += 1
+#                 continue
+#         self.start += 1
+#         return temp
+import datetime as dt
+class LeapYear:
+    def __init__(self):
+        self.now = dt.date.today().year
+    def isLeapYear(self, year):
+        if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+            return True
+        else:
+            return False
     def __iter__(self):
         return self
     def __next__(self):
-        if self.start <= self.end:
-            if (self.start%4 == 0 and self.start%100 != 0) or (self.start%400 == 0):
-                print(str(self.start) + '是闰年')
-            else:
-                print(str(self.start) + '不是闰年')
-                
+        while not self.isLeapYear(self.now):
+            self.now -= 1
+        temp = self.now
+        self.now -= 1
+        return temp
+
+
 
