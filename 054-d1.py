@@ -1,3 +1,4 @@
+'''python登录豆瓣'''
 import urllib.request, re
 import urllib.parse
 import http.cookiejar

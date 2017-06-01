@@ -4,7 +4,7 @@ import urllib.parse
 import json
 import sys
 # url = 'http://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule&sessionFrom=dict2.index'
-content = '手好痛'
+content = '日了狗'
 # content = sys.argv[1]
 url = 'http://fanyi.youdao.com/translate?smartresult=dict&smartresult=rule&smartresult=ugc&sessionFrom=http://www.youdao.com/'
 data = {}
@@ -26,7 +26,6 @@ data = data.encode('utf-8')
 res = urllib.request.urlopen(url, data)
 html = res.read().decode('utf-8')
 html = json.loads(html)
-# print(html)
 print(html['translateResult'][0][0]['tgt'])
 
 
