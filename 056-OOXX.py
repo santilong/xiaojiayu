@@ -1,9 +1,15 @@
+'''煎蛋网妹妹图片爬虫'''
 import urllib.request
 import os
 def open_url(url):
-    req = urllib.request.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36')
-    res = urllib.request.urlopen(req)
+    proxy = urllib.request.ProxyHandler({'https':'220.166.242.94:8118'})
+    opener = urllib.request.build_opener(proxy)
+    opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36')]
+    urllib.request.install_opener(opener)
+    # req = urllib.request.Request(url)
+    # req.add_header('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36')
+    # res = urllib.request.urlopen(req)
+    res = urllib.request.urlopen(url)
     html = res.read()
     return html
 
