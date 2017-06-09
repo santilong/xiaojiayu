@@ -73,7 +73,7 @@ def openfile():
 
 def send_mail():
     msg = yagmail.yagmail.SMTP_SSL(user='请自行添加',password='请自行添加',host='smtp.gmail.com',port='465')
-    msg.send(to='请自行添加'',subject='send mail test', contents=['hello world'],attachments='one.txt')
+    msg.send(to='请自行添加',subject='send mail test', contents=['hello world'], attachments='one.txt')
 
 if __name__ == '__main__':
     option = sys.argv[1]
@@ -87,4 +87,4 @@ if __name__ == '__main__':
         thread(cmdict, mysql, dbname)
     elif option == 'command':
         thread(cmdict, ssh, dbname)
-    send_mail()
+    # send_mail()

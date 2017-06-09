@@ -1,0 +1,5 @@
+2017-06-06 16:46:24,333 test DEBUG debug message
+2017-06-06 16:46:24,334 test INFO info message
+2017-06-06 16:46:24,335 test warning warn message
+2017-06-06 16:46:24,335 test info error message
+2017-06-06 16:46:24,335 test debug critical message

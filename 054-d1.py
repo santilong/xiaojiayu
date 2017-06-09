@@ -16,6 +16,7 @@ data['form_password'] = '520Wy1314'
 opener.addheaders = [('User-Agent','ooxx')]
 res = opener.open(url, urllib.parse.urlencode(data).encode('utf-8'))
 html = res.read().decode('utf-8')
+print(html)
 m = re.search('<img id="captcha_image" src="(.*)" alt="captcha" class="captcha_image"/>', html)
 if m:
     imgurl = m.group(1)
